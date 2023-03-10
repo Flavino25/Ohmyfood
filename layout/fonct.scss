@@ -1,0 +1,30 @@
+@import"./util/boxshadow.scss";
+@import"./util/zoom.scss";
+.fonc {
+
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        @media(max-width:800px ) {
+            flex-direction: column;
+        }
+
+
+    }
+
+
+    & li {
+        background: color #f3f3f3;
+        padding: 1rem 2rem;
+        border: 1px solid red;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include baseshadow;
+    &:hover{@include zoom;}
+    }
+
+
+
+}

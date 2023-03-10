@@ -11,6 +11,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "shrikhand", cursive;
   text-align: center;
@@ -21,33 +25,25 @@ header {
 }
 
 main .ville {
-  display: flex;
+  font: size 1.5em;
   align-items: center;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 1rem;
-  padding: 0.5rem;
-  background-color: #f3f3f3;
-  text-align: center;
-}
-
-main .ville i {
-  font: size 1.5em;
 }
 
 /* Explorer*/
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   margin-top: 2rem;
   font-size: 2rem;
 }
-
 .explorer p {
   font-size: 1rem;
 }
-
 .explorer button {
   color: white;
   font-weight: 300;
@@ -60,10 +56,31 @@ main .ville i {
   transition: transform 200 ms;
   margin-top: 1rem;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.fonc ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .fonc ol {
+    flex-direction: column;
+  }
+}
+.fonc li {
+  background: color #f3f3f3;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.fonc li:hover {
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=style.css.map */
