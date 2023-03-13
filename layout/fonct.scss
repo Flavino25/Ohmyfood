@@ -1,10 +1,10 @@
-@import"./util/boxshadow.scss";
-@import"./util/zoom.scss";
+@use"./util/boxshadow.scss";
+@use"./util/zoom.scss";
 .fonc {
 
     & ol {
         display: flex;
-        flex-wrap: wrap;
+       
         gap: 1rem;
 
         @media(max-width:800px ) {
