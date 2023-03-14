@@ -19,6 +19,14 @@ h2 {
   padding: 2rem 0;
   margin: 0;
 }
+h2 h3, h2 p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 header {
   font-family: "shrikhand", cursive;
@@ -142,7 +150,7 @@ main .ville {
 }
 .menus .card_image {
   height: 15rem;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
   background-size: cover;
 }
 .menus .card__image1 {
@@ -156,6 +164,22 @@ main .ville {
 }
 .menus .card__image4 {
   background-image: url("../asserts/image4.jpg");
+}
+.menus .card_description {
+  position: relative;
+}
+.menus .card_description h3, .menus .card_description p {
+  margin: 0.5rem;
+}
+.menus .card_description h3 {
+  padding: top 0.5rem;
+}
+.menus .card_description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */
