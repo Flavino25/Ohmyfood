@@ -8,6 +8,7 @@
 .fonc {
    
     counter-reset:steps;
+    margin-bottom: 2rem;
 
     & ol {
         display: flex;
@@ -35,9 +36,11 @@
          place-items: center;
          border-radius: 50%;
          position: absolute;
-         bottom: variables.$fonct-var-heihgt;
+         top: 50%;
          left: -1 * variables.$fonct-var-heihgt;
+        transform: translateY(-50%);
         }
+
         
         list-style-type: none;
         background: color #f3f3f3;

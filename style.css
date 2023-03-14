@@ -12,7 +12,12 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0 7rem;
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
 }
 
 header {
@@ -38,7 +43,6 @@ main .ville {
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 2rem;
   font-size: 2rem;
 }
 .explorer p {
@@ -63,6 +67,7 @@ main .ville {
 
 .fonc {
   counter-reset: steps;
+  margin-bottom: 2rem;
 }
 .fonc ol {
   display: flex;
@@ -94,8 +99,9 @@ main .ville {
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 1rem;
+  top: 50%;
   left: -1rem;
+  transform: translateY(-50%);
 }
 .fonc li:hover {
   transform: scale(1.02);
@@ -104,6 +110,26 @@ main .ville {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.5rem;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus .menus_cards {
+  display: grid;
+  grid-template-columns: repeat(2fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menus .menus_cards {
+    grid-template-columns: repeat 1, 1fr;
+  }
+}
+.menus .card .card_image {
+  background-image: url("../asserts/image1.jpg");
+  height: 15rem;
+  border-radius: 3rem;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
