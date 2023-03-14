@@ -15,12 +15,18 @@
 
     .card {
          
-    & .card_image{
-        background-image: url("../asserts/image1.jpg");
+    &_image{
         height: 15rem;
-        border-radius: 3rem;
+        border-radius: 1rem;
         background-size: cover;
     }
-    
+    @for $i from 1 through 4{
+     &__image#{$i} { background-image: url("../asserts/image#{$i}.jpg");}
+
     }
+ 
+
+    }
+   
+    
 }

@@ -125,11 +125,22 @@ main .ville {
     grid-template-columns: repeat 1, 1fr;
   }
 }
-.menus .card .card_image {
-  background-image: url("../asserts/image1.jpg");
+.menus .card_image {
   height: 15rem;
-  border-radius: 3rem;
+  border-radius: 1rem;
   background-size: cover;
+}
+.menus .card__image1 {
+  background-image: url("../asserts/image1.jpg");
+}
+.menus .card__image2 {
+  background-image: url("../asserts/image2.jpg");
+}
+.menus .card__image3 {
+  background-image: url("../asserts/image3.jpg");
+}
+.menus .card__image4 {
+  background-image: url("../asserts/image4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
