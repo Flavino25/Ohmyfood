@@ -1,0 +1,17 @@
+
+@use"./util/couleur";
+footer{
+
+    background-color:couleur.$darkgrey ;
+    padding: 1rem 2rem;
+    color: white;
+h2{ font-family: "shrikhand", "sans-serif";
+    font-weight: 500;
+    padding: 1rem;
+}
+p { 
+    padding: 0.2rem;
+}
+
+
+}

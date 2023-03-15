@@ -1,5 +1,6 @@
 /* Explorer*/
-
+@use "./util/boxshadow";
+@use "./util/linear-gradient";
 .explorer{
     text-align: center;
 
@@ -21,6 +22,8 @@
     background-image: linear-gradient(to top,rgba(147,86,220,0.9),rgba(255,121,218,0.9)); 
     transition:transform 200 ms;
     margin-top: 1rem;
+    @include boxshadow.baseshadow;
+    @include linear-gradient.gradient;
 }
     button:hover {
     transform: scale(1.02);

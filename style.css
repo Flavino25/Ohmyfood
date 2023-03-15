@@ -14,6 +14,11 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 h2 {
   padding: 2rem 0;
@@ -37,13 +42,20 @@ header {
   position: relative;
 }
 
-main .ville {
+.ville {
   font: size 1.5em;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+i {
+  font-size: 1.5rem;
 }
 
 /* Explorer*/
@@ -67,6 +79,8 @@ main .ville {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200 ms;
   margin-top: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -122,6 +136,7 @@ main .ville {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
 .menus .menus_cards {
   display: grid;
@@ -141,8 +156,8 @@ main .ville {
   position: absolute;
   height: 2rem;
   width: 5rem;
-  background-color: #99E200;
-  color: black;
+  background-color: #909b78;
+  color: #0b0b09;
   display: grid;
   place-items: center;
   right: 1rem;
@@ -167,19 +182,45 @@ main .ville {
 }
 .menus .card_description {
   position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
 }
-.menus .card_description h3, .menus .card_description p {
-  margin: 0.5rem;
+.menus .card h3,
+.menus .card p {
+  padding: 0.3rem;
 }
-.menus .card_description h3 {
-  padding: top 0.5rem;
-}
-.menus .card_description i {
+.menus .card i {
   font-size: 2rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+.menus .card .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.menus .card:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 1rem;
+}
+footer p {
+  padding: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
