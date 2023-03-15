@@ -1,5 +1,5 @@
-@use"./util/boxshadow.scss";
-@use"./util/zoom.scss";
+@use"./mixins.scss";
+
 @use"./util/variables.scss";
 @use"./util/couleur.scss";
 
@@ -48,9 +48,9 @@
         border: 1px solid red;
         flex-grow: 1;
         border-radius: 1rem;
-        @include boxshadow.baseshadow;
+        @include mixins.baseshadow;
     &:hover{
-        @include zoom.zoom;
+        @include mixins.zoom;
     }
     } 
     & i.fas{

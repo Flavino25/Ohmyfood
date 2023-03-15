@@ -1,6 +1,6 @@
 @use "./util/variables";
 @use "./util/couleur";
-@use "./util/linear-gradient";
+@use "./mixins";
 
 .menus {
     background-color: #f6f6f6;
@@ -83,7 +83,7 @@
             -webkit-background-clip: text;
             opacity: 0;
             transition: all 200ms ease-in-out;
-            @include linear-gradient.gradient(1);
+            @include mixins.gradient(1);
 
         }
         &:hover .fas { 
