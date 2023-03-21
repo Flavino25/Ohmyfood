@@ -1,7 +1,6 @@
 @use"./mixins.scss";
-
 @use"./util/variables.scss";
-@use"./util/couleur.scss";
+@use "./util/couleur.scss";
 
 
 
@@ -55,7 +54,8 @@
     } 
     & i.fas{
         margin-right: 1rem;
-        color: couleur.$lightgrey;
+        color: couleur.$lightergray;
+       
         font-size: 1.5rem;
     }
 

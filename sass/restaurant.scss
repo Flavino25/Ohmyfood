@@ -1,44 +1,95 @@
 @use"../layout/mixins";
 @use"../layout/util/variables.scss";
-.banner img {
-    display: block;
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    -o-object-position: center bottom;
-   
-}
-.resto_title {
-   margin-top:  -2rem; 
+@use"../layout/util/couleur.scss";
 
-
-
-h2 {
-    font-family: "shrikhand", "cursive";
-    padding: 2rem 1rem;
-
-  @include mixins.heart-animated;
-  border-radius: 2rem 2rem 0 0;
+body {
+    background-color:couleur.$lightergray;
 }
 
+#page-resto {
 
-}
-.menu-grid {
-    background: yellow;
-    display: grid;
-    grid-template-columns: repeat(3,1f );
-    gap: 1rem;
-    & > * { border: 1px solid red;
-    @media (max-width: variables.$breakpoint){ 
-            grid-template-columns:repeat(1fr);
+    .banner img {
+        display: block;
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+        -o-object-position: center bottom;
+
+    }
+
+    .resto_title {
+        margin-top: -2rem;
+
+        h2 {
+            font-family: "shrikhand", "cursive";
+            padding: 2rem 1rem;
+
+            @include mixins.heart-animated;
+            border-radius: 2rem 2rem 0 0;
+            background-color: couleur.$lightergray;
+            
+
         }
-    
+
     }
 
-    
-    
-    }
     .resto_main {
         padding: 0 1rem;
         
+
+
     }
+
+    .menu {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1f);
+        gap: 1rem;
+
+
+        @media (max-width: variables.$breakpoint) {
+            grid-template-columns: repeat(1fr);
+        }
+
+        .menu_category {
+            border: 1px solid red;
+            background-color: white;
+            border-radius: 1rem;
+            
+            .menu-item { 
+               display: flex;
+               
+              
+              
+               .menu-item_price{ 
+                margin-left: auto;
+                font-weight: 900;   
+                 padding: 1rem;
+                 display: flex;
+                 align-items: flex-end;
+
+                 
+            }
+
+        .menu-item_description {
+         padding: 1rem;
+        }
+            .menu-item_check {
+                background-color:couleur.$color-tertiary ;
+               }
+
+              
+               & > * {  border: 1px solid;}
+               
+               
+            }
+            
+            
+        }
+       
+   
+   
+    }
+
+
+}

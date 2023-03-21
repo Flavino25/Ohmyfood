@@ -2,6 +2,8 @@
 @use "./util/couleur";
 @use "./mixins";
 
+#homepage{
+
 .menus {
     background-color: #f6f6f6;
     margin-bottom: 2rem;
@@ -72,4 +74,4 @@
 
 
 
-}
+}}
