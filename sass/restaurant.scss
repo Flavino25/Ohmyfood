@@ -1,6 +1,17 @@
 @use"../layout/mixins";
 @use"../layout/util/variables.scss";
 @use"../layout/util/couleur.scss";
+@use"../layout/util/animations.scss";
+
+@keyframes quarter-spin { 
+    0% {
+        transform: rotate (-270 deg);
+    }
+    100% {
+        transform:rotate(0) ;
+    }
+
+}
 
 body {
     background-color:couleur.$lightergray;
@@ -52,12 +63,18 @@ body {
         }
 
         .menu_category {
-            border: 1px solid red;
             background-color: white;
-            border-radius: 1rem;
+          
+            
+           
             
             .menu-item { 
                display: flex;
+               overflow: hidden;
+               border-radius: 1rem;
+               
+              
+              @include mixins.baseshadow;
                
               
               
@@ -75,18 +92,39 @@ body {
          padding: 1rem;
         }
             .menu-item_check {
+                display: grid;
+                place-items: center;
+                $button-width: 4rem;
+                border-radius: 0 1rem 1rem 0 ;
                 background-color:couleur.$color-tertiary ;
-               }
-
-              
-               & > * {  border: 1px solid;}
+               margin-right: -1 * $button-width;
                
-               
+               width: $button-width;
+               transition: margin-right 0.5s;
+               i {
+                display: grid;
+                place-items: center;
+                background: white;
+                aspect-ratio: 1;
+                width: 2rem;
+                border-radius: 1rem ;
+                color: couleur.$color-tertiary ;
             }
+            }
+            &:hover .menu-item_check {  
+                margin-right: 0;
+             }
+             i {
+                animation: quarter-spin 1s;
+             }
+                
+            
+         
+             }
             
             
         }
-       
+      
    
    
     }
