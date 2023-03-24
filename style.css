@@ -76,8 +76,11 @@ i {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200 ms;
   margin-top: 1rem;
-  box-shadow: 2px 1px 8px -3px #7e7e7e;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+}
+.explorer button button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -184,6 +187,7 @@ i {
 }
 #homepage .menus .card_description::before {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -192,7 +196,6 @@ i {
   font-weight: 400;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -204,6 +207,7 @@ i {
 }
 #homepage .menus .card_description::after {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -212,7 +216,6 @@ i {
   font-weight: 900;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -250,6 +253,24 @@ body {
   background-color: #f6f6f6;
 }
 
+#page-resto header::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smothing: antialiased;
+  font-family: "font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+#page-resto:hover {
+  transform: scale(1.02);
+}
 #page-resto .banner img {
   display: block;
   width: 100%;
@@ -271,6 +292,7 @@ body {
 }
 #page-resto .resto_title h2::before {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -279,7 +301,6 @@ body {
   font-weight: 400;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -291,6 +312,7 @@ body {
 }
 #page-resto .resto_title h2::after {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -299,7 +321,6 @@ body {
   font-weight: 900;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -389,6 +410,9 @@ body {
   color: #99E2D0;
   transform: rotate(-360deg);
 }
+#page-resto .menu .menu_category .menu-item:hover {
+  cursor: pointer;
+}
 #page-resto .menu .menu_category .menu-item:hover .menu-item_check {
   margin-right: 0;
 }
@@ -402,6 +426,32 @@ body {
   100% {
     transform: rotate(0);
   }
+}
+#page-resto section.order {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+#page-resto section.order button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem, 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: transform 200 ms;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+#page-resto section.order button button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+#page-resto section.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */

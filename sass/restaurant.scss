@@ -11,6 +11,19 @@ body {
 
 #page-resto {
 
+    header::before {
+        @include mixins.font-awsome($font-weight:900);
+        content: "\f060";
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+        &:hover{
+            @include mixins.zoom;
+        }
+   
+
     .banner img {
         display: block;
         width: 100%;
@@ -135,6 +148,8 @@ h3 {
                 }
 
                 &:hover {
+                    cursor:pointer ;
+                    
                     .menu-item_check {
                         margin-right: 0;
                     }
@@ -155,7 +170,21 @@ h3 {
 
 
     }
-
+section.order {
+   
+ height: 30vh;
+    display: grid;
+    place-items: center;
+    button {
+         @include mixins.base-button;
+           
+        }
+        & button:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+          }
+    
+}
 
 
 }
