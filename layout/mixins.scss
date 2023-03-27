@@ -6,8 +6,8 @@
      @mixin baseshadow{
         box-shadow: 2px 1px 8px -3px #7e7e7e;
     }
-    @mixin zoom {
-        transform: scale(1.02);
+    @mixin zoom($zoom-level:1.02, $transformation:none) {
+        transform: $transformation scale($zoom-level);
         }
         @mixin font-awsome($font-weight:400){
             display: inline-block;

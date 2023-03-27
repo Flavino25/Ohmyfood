@@ -10,19 +10,25 @@ body {
 }
 
 #page-resto {
+    header{
+       
 
-    header::before {
+        
+        &:hover::before { 
+            @include mixins.zoom ($zoom-level:1.2, $transformation: translateY(-50%));
+           }
+       
+        &::before{ 
         @include mixins.font-awsome($font-weight:900);
         content: "\f060";
         left: 1rem;
         top: 50%;
         transform: translateY(-50%);
         font-size: 20px;
-    }
-        &:hover{
-            @include mixins.zoom;
-        }
-   
+        transition: transform 200ms;
+     }
+     }
+ }
 
     .banner img {
         display: block;
@@ -70,6 +76,7 @@ h3 {
     text-transform: uppercase ;
     font-weight: 400;
     position: relative;
+    margin: bottom 1rem; 
     &::after{ 
         content:"" ;
         position: absolute;
@@ -87,8 +94,16 @@ h3 {
 
 
 
-
             .menu-item {
+                $numberOfItems:3;
+                @for $i from 1 through 3 { 
+                    &:nth-child(#{$i}) { 
+                       animation-delay: 100ms * $i;
+                   
+           
+                    }
+                    }
+           
                 display: flex;
                 background-color: white;
                 overflow: hidden;
@@ -98,6 +113,8 @@ h3 {
 
 
                 @include mixins.baseshadow;
+                animation: appear 1s;
+                animation-fill-mode: both;
 
 
 
@@ -187,5 +204,5 @@ section.order {
 }
 
 
-}
+
 
