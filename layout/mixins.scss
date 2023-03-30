@@ -6,7 +6,7 @@
      @mixin baseshadow{
         box-shadow: 2px 1px 8px -3px #7e7e7e;
     }
-    @mixin zoom($zoom-level:1.02, $transformation:none) {
+    @mixin zoom($zoom-level:1.02, $transformation:null) {
         transform: $transformation scale($zoom-level);
         }
         @mixin font-awsome($font-weight:400){
@@ -63,6 +63,7 @@
         @mixin base-button {
             color: white;
             font-weight: 300;
+            height: 40px;
             font-size: 1.5rem;
             padding: 1rem, 2rem;
             border: none;

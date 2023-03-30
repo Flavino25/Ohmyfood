@@ -23,6 +23,8 @@
 
 
     & li {
+        display: flex;
+        align-items: center;
         position: relative;
         &::before{
          content: counter(steps);
@@ -42,19 +44,24 @@
 
         
         list-style-type: none;
-        background: color #f3f3f3;
+        background: color #f6f6f6;
         padding: 1rem 2rem;
-        border: 1px solid red;
+        
         flex-grow: 1;
         border-radius: 1rem;
         @include mixins.baseshadow;
     &:hover{
         @include mixins.zoom;
+        background-color: lighten(couleur.$purple, 30%);
+        i::before {
+            color:couleur.$purple ; 
+
+        }
     }
     } 
     & i.fas{
         margin-right: 1rem;
-        color: couleur.$lightergray;
+        color: rgb(118, 98, 98);
        
         font-size: 1.5rem;
     }

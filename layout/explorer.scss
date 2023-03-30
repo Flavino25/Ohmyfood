@@ -4,19 +4,23 @@
 
 .explorer{
     text-align: center;
+    margin: 2rem;
 
 & h2{
    
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 1rem;
 }
 & p {
     font-size: 1rem;
 }
 & button {
+  
     
   
 
  @include mixins.base-button;
+ font-size: 1rem;
 }   
 & button:hover {
     transform: scale(1.02);
@@ -26,7 +30,7 @@
 
 .loader {
     $animation-duration:1s;
-    $animation-count:4;
+    $animation-count:3;
     position: fixed;
     display: grid;
     place-items: center;

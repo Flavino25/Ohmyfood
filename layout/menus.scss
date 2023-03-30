@@ -13,6 +13,9 @@
         display: grid;
         grid-template-columns: repeat(2*1fr);
         gap: 2rem;
+        @media (min-width: 1001px) {
+            grid-template-columns: repeat(2, 1fr);
+           }
 
         @media(max-width:variables.$breakpoint) {
             grid-template-columns: repeat (1, 1fr);
@@ -47,6 +50,7 @@
             height: 15rem;
             border-radius: 1rem 1rem 0 0;
             background-size: cover;
+            background-position: center;
         }
 
         @for $i from 1 through 4 {
@@ -72,6 +76,7 @@
 
     }
 
+ 
+}
 
-
-}}
+}
