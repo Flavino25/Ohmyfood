@@ -12,8 +12,6 @@ body {
 #page-resto {
     header{
        
-
-        
         &:hover::before { 
             @include mixins.zoom ($zoom-level:1.2, $transformation: translateY(-50%));
            }
